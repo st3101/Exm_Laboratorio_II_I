@@ -86,7 +86,7 @@ namespace Biblioteca.Sistema
             listaEmpleado = new List<Empleado>();
 
             listaEmpleado.Add(new Empleado("Santiago", "Leonardi", "st3101", "147", true, "23-42398998-9", 60500));
-            listaEmpleado.Add(new Empleado("Daniela", "Ibasca", "Danery", "123456789", true, "23-42683254-3", 50000));
+            listaEmpleado.Add(new Empleado("jiji", "jajaj", "aprobadin", "123456789", true, "23-42683254-3", 50000));
             listaEmpleado.Add(new Empleado("Papa", "Pepa", "Pepapa", "meGusta", false, "23-45684521-9", 5000));
             listaEmpleado.Add(new Empleado("fafa", "fefe", "LionCapo", "GokuMiDios123", false, "23-40225687-7", 6000));
             listaEmpleado.Add(new Empleado("Nene", "Nana", "Fachaenpersona", "soyyo", false, "23-42398998-9", 7500));

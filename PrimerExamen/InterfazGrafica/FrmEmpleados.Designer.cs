@@ -56,7 +56,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SlateBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -90,6 +90,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.DgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvEmpleado.RowTemplate.Height = 29;
+            this.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvEmpleado.Size = new System.Drawing.Size(804, 207);
             this.DgvEmpleado.TabIndex = 0;
             // 

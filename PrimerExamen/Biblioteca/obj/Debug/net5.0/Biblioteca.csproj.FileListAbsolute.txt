@@ -22,3 +22,15 @@ C:\Users\Danery\Desktop\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.dll
 C:\Users\Danery\Desktop\PrimerExamen\Biblioteca\obj\Debug\net5.0\refint\Biblioteca.dll
 C:\Users\Danery\Desktop\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.pdb
 C:\Users\Danery\Desktop\PrimerExamen\Biblioteca\obj\Debug\net5.0\ref\Biblioteca.dll
+F:\PrimerExamen\Biblioteca\bin\Debug\net5.0\Biblioteca.deps.json
+F:\PrimerExamen\Biblioteca\bin\Debug\net5.0\Biblioteca.dll
+F:\PrimerExamen\Biblioteca\bin\Debug\net5.0\Biblioteca.pdb
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.AssemblyReference.cache
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfoInputs.cache
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.AssemblyInfo.cs
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.csproj.CoreCompileInputs.cache
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.dll
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\refint\Biblioteca.dll
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\Biblioteca.pdb
+F:\PrimerExamen\Biblioteca\obj\Debug\net5.0\ref\Biblioteca.dll
