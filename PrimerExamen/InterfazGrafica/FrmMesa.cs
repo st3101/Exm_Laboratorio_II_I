@@ -8,36 +8,34 @@ namespace InterfazGrafica
 {
     public partial class FrmMesa : Form
     {
-        Mesa mesa;
+        FrmFacturacion frmFacturacion;
+        Cliente cliente;
         bool seVendeComida;
         float valorEstasionamiento;
         string historial;
-        public Mesa Mesa { get => mesa; set => mesa = value; }
+        public Cliente Mesa { get => cliente; set => cliente = value; }
         public bool SeVendeComida { get => seVendeComida; set => seVendeComida = value; }
 
-        public FrmMesa(Mesa mesa, bool seVendeComida)
+        public FrmMesa(Cliente mesa, bool seVendeComida)
         {
             InitializeComponent();
-            this.mesa = mesa;
+            this.cliente = mesa;
             SeVendeComida = seVendeComida;
             valorEstasionamiento = 100;
         }
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
 
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Ignore;
         }
 
-        private void CargarMesa()
+        private void CargarMesa() 
         {
             ActualizarTodo();
-            TxtNombreCliente.Text = mesa.Nombre;
-            TxtApellidoCliente.Text = mesa.Apellido;
-            CmbMetodoPago.Text = "Efectivo";
+            TxtNombreCliente.Text = cliente.Nombre;
+            TxtApellidoCliente.Text = cliente.Apellido;
+  
         }
 
         private void ActualizarTodo()
@@ -65,17 +63,16 @@ namespace InterfazGrafica
         private void ActualizarDgvAlimento()
         {
             DgvListaAlimentos.DataSource = string.Empty;
-            DgvListaAlimentos.DataSource = mesa.ListaAlimentos;
+            DgvListaAlimentos.DataSource = cliente.ListaAlimentos;
         }
 
         private void MostarCuentaAlimento()
         {
-            LblPrecioApagarNumero.Text = Mesa.GastoTotal.ToString();
+            LblPrecioApagarNumero.Text = $"Precio Alimentos: {Mesa.GastoTotal}";
         }
         private void CalcularCuentatotal()
         {
-            float precioTotal = Sistema.CalculaTotal(Mesa.GastoTotal, CkbEstacionamiento.Checked, CmbMetodoPago.Text);
-            LblTotal.Text = $"Total: {precioTotal}";
+
         }
         private void BtnActualizarDatos_Click(object sender, EventArgs e)
         {
@@ -98,7 +95,7 @@ namespace InterfazGrafica
             {
                 Bebida auxBebida = Sistema.ClonarBebidaMismoId(bebida);
 
-                if (auxBebida is not null && Sistema.PasarAliemntoAMesa(mesa, auxBebida))
+                if (auxBebida is not null && Sistema.PasarAliemntoAMesa(cliente, auxBebida))
                 {
                     bebida.Cantidad--;
 
@@ -106,7 +103,7 @@ namespace InterfazGrafica
                     {
                         Sistema.EliminarBebida(indice);
                     }
-                    mesa.CalcularPrecio();
+                    cliente.CalcularPrecio();
                 }
             }
             ActualizarTodo();
@@ -123,7 +120,7 @@ namespace InterfazGrafica
             {
                 Comida auxComida = Sistema.ClonarComidaMismoId(comida);
 
-                if (auxComida is not null && Sistema.PasarAliemntoAMesa(mesa, auxComida))
+                if (auxComida is not null && Sistema.PasarAliemntoAMesa(cliente, auxComida))
                 {
                     comida.Cantidad--;
 
@@ -131,7 +128,7 @@ namespace InterfazGrafica
                     {
                         Sistema.EliminarComida(indice);
                     }
-                    mesa.CalcularPrecio();
+                    cliente.CalcularPrecio();
                 }
             }
             ActualizarTodo();
@@ -139,9 +136,11 @@ namespace InterfazGrafica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mesa.GuardarInformacionVenta(CkbEstacionamiento.Checked, CmbMetodoPago.Text, LblTotal.Text);
-            Sistema.BorrarMesa(mesa);
-            this.DialogResult = DialogResult.OK;
+            if (MostrarFrmFacturacion())
+            {
+                cliente.limpiarCliente();
+                DialogResult = DialogResult.OK;
+            }       
         }
 
         private void CkbEstacionamiento_CheckedChanged(object sender, EventArgs e)
@@ -156,7 +155,7 @@ namespace InterfazGrafica
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            Sistema.BorrarMesa(mesa);
+            cliente.limpiarCliente();
             this.DialogResult = DialogResult.Cancel;
         }
 
@@ -170,9 +169,9 @@ namespace InterfazGrafica
 
             if (!string.IsNullOrEmpty(auxNombre) && !string.IsNullOrEmpty(auxApellido))
             {
-               
-                mesa.Nombre = auxNombre;
-                mesa.Apellido = auxApellido;
+
+                cliente.Nombre = auxNombre;
+                cliente.Apellido = auxApellido;
             }
             else
             {
@@ -180,6 +179,19 @@ namespace InterfazGrafica
             }
         }
 
-    }
+        private bool MostrarFrmFacturacion()
+        {
+            bool retorno = false;
 
+            FrmFacturacion frmFacturacion = new FrmFacturacion(cliente);
+
+            if (frmFacturacion.ShowDialog() == DialogResult.OK)
+            {
+                retorno = true;
+            }
+
+            frmFacturacion.Close();
+            return retorno;
+        }
+    }
 }

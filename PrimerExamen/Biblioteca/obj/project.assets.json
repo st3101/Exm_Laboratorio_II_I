@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\PrimerExamen\\Biblioteca\\Biblioteca.csproj",
+      "projectUniqueName": "D:\\Escritorio\\PrimerExamen\\Biblioteca\\Biblioteca.csproj",
       "projectName": "Biblioteca",
-      "projectPath": "F:\\PrimerExamen\\Biblioteca\\Biblioteca.csproj",
+      "projectPath": "D:\\Escritorio\\PrimerExamen\\Biblioteca\\Biblioteca.csproj",
       "packagesPath": "C:\\Users\\Santi\\.nuget\\packages\\",
-      "outputPath": "F:\\PrimerExamen\\Biblioteca\\obj\\",
+      "outputPath": "D:\\Escritorio\\PrimerExamen\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

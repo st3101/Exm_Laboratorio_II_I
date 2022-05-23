@@ -5,7 +5,7 @@ namespace Biblioteca.Sistema
 {
     public static class Sistema
     {
-        static public Mesa[] arrayMesas;
+        static public Cliente[] arrayMesas;
         static private List<Empleado> listaEmpleado;
         static private List<Comida> listaComida;
         static private List<Bebida> listaBebida;
@@ -21,40 +21,41 @@ namespace Biblioteca.Sistema
         public static List<Empleado> ListaEmpleado { get => listaEmpleado; }
         public static List<Comida> ListaComida { get => listaComida; }
         public static List<Bebida> ListaBebida { get => listaBebida; }
-        public static Mesa[] ArrayMesas { get => arrayMesas; set => arrayMesas = value; }
+        public static Cliente[] ArrayMesas { get => arrayMesas; set => arrayMesas = value; }
 
         private static void InstaciarMesas()
         {
-            arrayMesas = new Mesa[20]
+            arrayMesas = new Cliente[20]
             {
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa(),
-                new Mesa()
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente(),
+                new Cliente()
             };
         }
-        public static Mesa BuscarMesaInice(string indice)
+        public static Cliente BuscarMesaInice(string indice)
         {
             int aux;
-            if (indice is not null && int.TryParse(indice, out aux) && aux >= 0 && arrayMesas.Length > aux)
+            if (indice is not null && int.TryParse(indice, out aux) && aux >= 0 && arrayMesas.Length >= aux)
             {
                 return arrayMesas[aux - 1];
+
             }
 
             return null;
@@ -63,21 +64,21 @@ namespace Biblioteca.Sistema
         {
             listaBebida = new List<Bebida>();
 
-            listaBebida.Add(new Bebida("Coca-Cola", "Lata", 50, 1, 15));
-            listaBebida.Add(new Bebida("Coca-Cola", "Botella", 100, (float)2.25, 10));         
-            listaBebida.Add(new Bebida("Pepsi", "Lata", 45, 1, 5));
-            listaBebida.Add(new Bebida("Pepsi", "Botella", 95, (float)2.25, 7));
-            listaBebida.Add(new Bebida("Moster", "Lata", 75,(float)1.25, 2));
-            listaBebida.Add(new Bebida("Caffe", "Taza", 50, (float)0.50, 30));
+            listaBebida.Add(new Bebida("Coca-Cola", "Lata", 50, 1, 15, Alimento.ETemperatura.frio));
+            listaBebida.Add(new Bebida("Coca-Cola", "Botella", 100, (float)2.25, 10, Alimento.ETemperatura.frio));
+            listaBebida.Add(new Bebida("Pepsi", "Lata", 45, 1, 5, Alimento.ETemperatura.frio));
+            listaBebida.Add(new Bebida("Pepsi", "Botella", 95, (float)2.25, 7, Alimento.ETemperatura.frio));
+            listaBebida.Add(new Bebida("Moster", "Lata", 75, (float)1.25, 2, Alimento.ETemperatura.frio));
+            listaBebida.Add(new Bebida("Caffe", "Taza", 50, (float)0.50, 30, Alimento.ETemperatura.caliente));
         }
         private static void HarcodearComida()
         {
             listaComida = new List<Comida>();
 
-            listaComida.Add(new Comida("Pizza", "Salsa y queso", 20, 25));
-            listaComida.Add(new Comida("Hamburgesa", "Completa", 50, 50));
-            listaComida.Add(new Comida("Papas Fritas", "Con sal", 50, 150));
-            listaComida.Add(new Comida("Milanesa", "Completa", 50, 150));
+            listaComida.Add(new Comida("Pizza", "Salsa y queso", 20, 25,Alimento.ETemperatura.tibio));
+            listaComida.Add(new Comida("Hamburgesa", "Completa", 50, 50, Alimento.ETemperatura.tibio));
+            listaComida.Add(new Comida("Papas Fritas", "Con sal", 50, 150, Alimento.ETemperatura.caliente));
+            listaComida.Add(new Comida("Milanesa", "Completa", 50, 150, Alimento.ETemperatura.caliente));
 
         }
         private static void HarcodearEmpleados()
@@ -129,9 +130,9 @@ namespace Biblioteca.Sistema
         }
 
 
-        public static bool AgregarComida(string nombreComida, string descripcion, string precio, string cantidad)
+        public static bool AgregarComida(string nombreComida, string descripcion, string precio, string cantidad,Alimento.ETemperatura temperatura)
         {
-            Comida auxComida = CrearComida(nombreComida, descripcion, precio, cantidad);
+            Comida auxComida = CrearComida(nombreComida, descripcion, precio, cantidad, temperatura);
 
             if (auxComida is not null)
             {
@@ -154,13 +155,13 @@ namespace Biblioteca.Sistema
             return null;
         }
 
-        public static Comida CrearComida(string nombreComida, string descripcion, string precio, string cantidad)
+        public static Comida CrearComida(string nombreComida, string descripcion, string precio, string cantidad,Alimento.ETemperatura temperatura)
         {
             Comida auxComida;
 
             if (int.Parse(cantidad) > 0)
             {
-                auxComida = new Comida(nombreComida, descripcion, float.Parse(precio), int.Parse(cantidad));
+                auxComida = new Comida(nombreComida, descripcion, float.Parse(precio), int.Parse(cantidad),temperatura);
 
                 if (auxComida is not null)
                 {
@@ -170,13 +171,13 @@ namespace Biblioteca.Sistema
 
             return null;
         }
-        public static Comida CrearComidaMismoId(string nombreComida, string descripcion, string precio, string cantidad, int id)
+        public static Comida CrearComidaMismoId(string nombreComida, string descripcion, string precio, string cantidad, int id, Alimento.ETemperatura temperatura)
         {
             Comida auxComida;
 
             if (int.Parse(cantidad) > 0)
             {
-                auxComida = new Comida(nombreComida, descripcion, float.Parse(precio), int.Parse(cantidad), id);
+                auxComida = new Comida(nombreComida, descripcion, float.Parse(precio), int.Parse(cantidad), id, temperatura);
 
                 if (auxComida is not null)
                 {
@@ -187,9 +188,9 @@ namespace Biblioteca.Sistema
             return null;
         }
 
-        public static Bebida CrearBebida(string nombreBebida, string descripcion, string precio, string litros, string cantidad)
+        public static Bebida CrearBebida(string nombreBebida, string descripcion, string precio, string litros, string cantidad, Alimento.ETemperatura temperatura)
         {
-            Bebida auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), float.Parse(litros), int.Parse(cantidad));
+            Bebida auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), float.Parse(litros), int.Parse(cantidad), temperatura);
 
             if (auxBebida is not null)
             {
@@ -198,9 +199,9 @@ namespace Biblioteca.Sistema
 
             return null;
         }
-        public static Bebida CrearBebidaMismoId(string nombreBebida, string descripcion, string precio, string litros, string cantidad, int id)
+        public static Bebida CrearBebidaMismoId(string nombreBebida, string descripcion, string precio, string litros, string cantidad, int id, Alimento.ETemperatura temperatura)
         {
-            Bebida auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), float.Parse(litros), int.Parse(cantidad), id);
+            Bebida auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), float.Parse(litros), int.Parse(cantidad), id, temperatura);
 
             if (auxBebida is not null)
             {
@@ -209,13 +210,13 @@ namespace Biblioteca.Sistema
 
             return null;
         }
-        public static bool AgregarBebida(string nombreBebida, string descripcion, string precio, string litros, string cantidad)
+        public static bool AgregarBebida(string nombreBebida, string descripcion, string precio, string litros, string cantidad,Alimento.ETemperatura temperatura)
         {
             Bebida auxBebida;
 
             if (int.Parse(cantidad) > 0)
             {
-                auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), int.Parse(litros), int.Parse(cantidad));
+                auxBebida = new Bebida(nombreBebida, descripcion, float.Parse(precio), int.Parse(litros), int.Parse(cantidad), temperatura);
 
                 if (auxBebida is not null)
                 {
@@ -293,7 +294,7 @@ namespace Biblioteca.Sistema
         public static bool PisarComida(Comida auxComida, int indice)
         {
             if (indice >= 0 && auxComida is not null)
-            {            
+            {
                 listaComida[indice] = auxComida;
                 return true;
             }
@@ -320,7 +321,7 @@ namespace Biblioteca.Sistema
             }
             return false;
         }
-        public static bool AgregarComidaAlimentoMesa(Mesa mesa, Comida comida, int indice)
+        public static bool AgregarComidaAlimentoMesa(Cliente mesa, Comida comida, int indice)
         {
             if (indice >= 0 && mesa is not null)
             {
@@ -355,7 +356,7 @@ namespace Biblioteca.Sistema
 
             if (comida is not null)
             {
-                auxComida = CrearComidaMismoId(comida.Nombre, comida.Descripcion, comida.Precio.ToString(), comida.Cantidad.ToString(), comida.Id);
+                auxComida = CrearComidaMismoId(comida.Nombre, comida.Descripcion, comida.Precio.ToString(), comida.Cantidad.ToString(), comida.Id, comida.Temperatura);
 
 
                 if (auxComida is not null)
@@ -373,7 +374,7 @@ namespace Biblioteca.Sistema
 
             if (bebida is not null)
             {
-                auxBebida = CrearBebidaMismoId(bebida.Nombre, bebida.Descripcion, bebida.Precio.ToString(), bebida.Litros.ToString(), bebida.Cantidad.ToString(), bebida.Id);
+                auxBebida = CrearBebidaMismoId(bebida.Nombre, bebida.Descripcion, bebida.Precio.ToString(), bebida.Litros.ToString(), bebida.Cantidad.ToString(), bebida.Id, bebida.Temperatura);
                 if (auxBebida is not null)
                 {
                     return auxBebida;
@@ -381,7 +382,7 @@ namespace Biblioteca.Sistema
             }
             return null;
         }
-        public static bool PasarAliemntoAMesa(Mesa mesa, Alimento comida)
+        public static bool PasarAliemntoAMesa(Cliente mesa, Alimento comida)
         {
             if (comida is not null && mesa is not null)
             {
@@ -399,13 +400,13 @@ namespace Biblioteca.Sistema
             }
             return false;
         }
-        public static float CalculaTotal(float totalAlimento,bool estacionamiento,string metodoDePago)
+        public static float CalculaTotal(float totalAlimento, bool estacionamiento, string metodoDePago)
         {
             float alimentoEstacionamiento;
             float resultadoRecarga;
             float TotalApagar;
 
-            if(estacionamiento is true)
+            if (estacionamiento is true)
             {
                 alimentoEstacionamiento = totalAlimento + 100;
             }
@@ -425,9 +426,47 @@ namespace Biblioteca.Sistema
             }
             return TotalApagar;
         }
-        public static void BorrarMesa(Mesa mesa)
+
+        public static string TieneEstacionamiento(bool estacionamiento)
         {
-            mesa.limpiarMesa();
+            if (estacionamiento == true)
+            {
+                return "Si";
+            }
+            return "No";
+        }
+
+        public static Empleado BuscarEmpleadoPorNombre(string nombre)
+        {
+            if(nombre is not null)
+            {            
+                foreach (Empleado item in ListaEmpleado)
+                {
+                    if(item.Nombre == nombre)
+                    {
+                        return item;
+                    }
+                }
+            }
+            return null;
+        }
+
+       public static Empleado BuscarEmpleadoPorSueldo(string sueldo)
+        {
+            float aux;
+            
+            if(sueldo is not null && float.TryParse(sueldo,out aux))
+            {
+                foreach (Empleado item in ListaEmpleado)
+                {
+                    if (item.Sueldo == aux)
+                    {
+                        return item;
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }

@@ -123,6 +123,36 @@ namespace InterfazGrafica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lupa {
+            get {
+                object obj = ResourceManager.GetObject("Lupa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa1 {
+            get {
+                object obj = ResourceManager.GetObject("Lupa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupa3 {
+            get {
+                object obj = ResourceManager.GetObject("lupa3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus_gross_horizontal_straight_line_symbol_icon_icons_com_74137 {
             get {
                 object obj = ResourceManager.GetObject("minus-gross-horizontal-straight-line-symbol_icon-icons.com_74137", resourceCulture);

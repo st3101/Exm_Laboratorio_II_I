@@ -1,5 +1,7 @@
-﻿using Biblioteca.Sistema;
+﻿using Biblioteca;
+using Biblioteca.Sistema;
 using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace InterfazGrafica
@@ -9,8 +11,7 @@ namespace InterfazGrafica
         FrmEmpleadosAltaEditar formularioAltaEditar;
         public FrmEmpleados()
         {
-            InitializeComponent();
-            ActualizarDataGridView();  
+            InitializeComponent();          
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace InterfazGrafica
             if (Sistema.EliminarEmpleado(indice))
             {
                 MessageBox.Show("Empleado Eliminado");
-                
+
             }
             else
             {
@@ -83,7 +84,45 @@ namespace InterfazGrafica
         }
         private int buscarFilaDataGridView()
         {
-           return DgvEmpleado.CurrentCell.RowIndex;
+            return DgvEmpleado.CurrentCell.RowIndex;
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            Empleado aux;
+
+            if (CmbBuscarPor.Text == "Nombre")
+            {
+                aux = Sistema.BuscarEmpleadoPorNombre(TbxBuscar.Text);
+                if (aux is not null)
+                {
+                    MessageBox.Show(aux.Mostrar());
+                }
+                else
+                {
+                    SystemSounds.Beep.Play();
+
+                }
+            }
+            else
+            {
+                aux = Sistema.BuscarEmpleadoPorSueldo(TbxBuscar.Text);
+
+                if (aux is not null)
+                {
+                    MessageBox.Show(aux.Mostrar());
+                }
+                else
+                {
+                    SystemSounds.Beep.Play();
+                }
+            }
+        }
+
+        private void FrmEmpleados_Load(object sender, EventArgs e)
+        {
+            ActualizarDataGridView();
+            CmbBuscarPor.Text = "Nombre";
         }
     }
 }

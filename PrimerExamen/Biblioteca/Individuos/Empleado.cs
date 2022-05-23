@@ -25,10 +25,10 @@ namespace Biblioteca
         }
 
         public string Usuario { get => usuario; set => usuario = value.ToLower(); }
-        private string Password { get => password; set => password = value; }
         public bool Administrador { get => administrador; set => administrador = value; }
         public string Cuil { get => cuil; set => cuil = value; }
         public float Sueldo { get => sueldo; set => sueldo = value; }
+        private string Password { get => password; set => password = value; }
 
         public static bool operator ==(Empleado empledo,string password)
         {
@@ -57,18 +57,18 @@ namespace Biblioteca
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"{base.Mostrar()} Cuil: {Cuil} Sueldo:{Sueldo}  Adminitrador: {esAdminitrador()}");
+            sb.Append($"{base.Mostrar()} Cuil: {Cuil} Sueldo:{Sueldo}  Adminitrador: {EsAdminitrador()}");
             return sb.ToString();
         }
         
         public string MostrarNombreAdminitrador()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"{base.MostrarNombreCompleto()} Cuil: {Cuil} Adminitrador: {esAdminitrador()}");
+            sb.Append($"{base.MostrarNombreCompleto()} Cuil: {Cuil} Adminitrador: {EsAdminitrador()}");
             return sb.ToString();
         }
 
-        public string esAdminitrador()
+        public string EsAdminitrador()
         {
             if(Administrador == true)
             {

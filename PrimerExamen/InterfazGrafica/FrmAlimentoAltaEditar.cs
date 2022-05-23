@@ -38,22 +38,22 @@ namespace InterfazGrafica
             {
                 if (TipoAlimento == "Comida")
                 {
-                    Sistema.AgregarComida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text,TxtCantidad.Text);
+                    Sistema.AgregarComida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text,TxtCantidad.Text,(Alimento.ETemperatura)CmbTemperatura.SelectedValue);
                 }
                 else if(tipoAlimento == "Bebida")
                 {
-                    Sistema.AgregarBebida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtLitro.Text, TxtCantidad.Text);
+                    Sistema.AgregarBebida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtLitro.Text, TxtCantidad.Text, (Alimento.ETemperatura)CmbTemperatura.SelectedValue);
                 }
             }
             else if (TipoAccion == "Editar")
             {
                 if (TipoAlimento == "Comida")
                 {
-                    Sistema.PisarComida(Sistema.CrearComida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtCantidad.Text),Indice);
+                    Sistema.PisarComida(Sistema.CrearComida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtCantidad.Text, (Alimento.ETemperatura)CmbTemperatura.SelectedValue),Indice);
                 }
                 else if(TipoAlimento == "Bebida")
                 {
-                    Sistema.PisarBebida(Sistema.CrearBebida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtLitro.Text, TxtCantidad.Text), Indice);
+                    Sistema.PisarBebida(Sistema.CrearBebida(TxtNombre.Text, TxtDescripcion.Text, TxtPrecio.Text, TxtLitro.Text, TxtCantidad.Text, (Alimento.ETemperatura)CmbTemperatura.SelectedValue), Indice);
                 }
             }
 
@@ -64,6 +64,7 @@ namespace InterfazGrafica
             CambiarTitulo();
             CargarTxtbox();
             CambiarEstadoLitro();
+            CargarCmbTemperatura();
         }
 
         private void CambiarEstadoLitro()
@@ -128,6 +129,10 @@ namespace InterfazGrafica
         private void FrmAlimentoAltaEditar_Load(object sender, EventArgs e)
         {
             EditarFormulario();
+        }
+        private void CargarCmbTemperatura()
+        {
+            CmbTemperatura.DataSource = Enum.GetValues((typeof(Alimento.ETemperatura)));
         }
     }
 }

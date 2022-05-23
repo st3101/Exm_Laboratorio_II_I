@@ -106,7 +106,7 @@
             this.DgvComida.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvComida.RowTemplate.Height = 25;
             this.DgvComida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvComida.Size = new System.Drawing.Size(754, 209);
+            this.DgvComida.Size = new System.Drawing.Size(894, 209);
             this.DgvComida.TabIndex = 0;
             // 
             // BtnAgregarComida
@@ -197,7 +197,7 @@
             this.DgvBebida.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvBebida.RowTemplate.Height = 25;
             this.DgvBebida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvBebida.Size = new System.Drawing.Size(754, 200);
+            this.DgvBebida.Size = new System.Drawing.Size(894, 200);
             this.DgvBebida.TabIndex = 4;
             // 
             // BtnEliminarBebida
@@ -238,7 +238,7 @@
             this.GpbEmpleado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GpbEmpleado.Name = "GpbEmpleado";
             this.GpbEmpleado.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GpbEmpleado.Size = new System.Drawing.Size(905, 236);
+            this.GpbEmpleado.Size = new System.Drawing.Size(1035, 236);
             this.GpbEmpleado.TabIndex = 7;
             this.GpbEmpleado.TabStop = false;
             this.GpbEmpleado.Text = "Lista Comida";
@@ -253,7 +253,7 @@
             this.GpbBebida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GpbBebida.Name = "GpbBebida";
             this.GpbBebida.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GpbBebida.Size = new System.Drawing.Size(905, 236);
+            this.GpbBebida.Size = new System.Drawing.Size(1035, 236);
             this.GpbBebida.TabIndex = 8;
             this.GpbBebida.TabStop = false;
             this.GpbBebida.Text = "Lista Bebibas";
@@ -277,7 +277,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(936, 546);
+            this.ClientSize = new System.Drawing.Size(1059, 546);
             this.Controls.Add(this.GpbBebida);
             this.Controls.Add(this.GpbEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

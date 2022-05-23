@@ -83,7 +83,7 @@ namespace InterfazGrafica
         private void MostrarMesa(Button btn, bool seVendeBebida)
         {
             DialogResult resultado;
-            Mesa mesa = Sistema.BuscarMesaInice(btn.Text);
+            Cliente mesa = Sistema.BuscarMesaInice(btn.Text);
             frmMesa = new FrmMesa(mesa, seVendeBebida);
 
 
@@ -156,11 +156,11 @@ namespace InterfazGrafica
         {
             BtnUsuario.BackColor = color;
         }
-        private void CargarHistorial(Mesa mesa)
+        private void CargarHistorial(Cliente mesa)
         {
             if (mesa is not null)
             {
-                historial.AppendLine(mesa.HistorialVenta);
+                historial.AppendLine(mesa.HistorialVentaConFormato);
             }
         }
 

@@ -51,17 +51,10 @@
             this.TxtNombreCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LblPrecioAlimento = new System.Windows.Forms.Label();
-            this.CmbMetodoPago = new System.Windows.Forms.ComboBox();
-            this.LblTotal = new System.Windows.Forms.Label();
-            this.CkbEstacionamiento = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.LblPrecioApagarNumero = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.GpbBebidas = new System.Windows.Forms.GroupBox();
             this.GpbInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInventarioComida)).BeginInit();
@@ -69,8 +62,6 @@
             this.GpbListaAlimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaAlimentos)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.GpbBebidas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,9 +70,9 @@
             this.GpbInventario.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.GpbInventario.Controls.Add(this.DgvInventarioComida);
             this.GpbInventario.ForeColor = System.Drawing.Color.MediumPurple;
-            this.GpbInventario.Location = new System.Drawing.Point(715, 1);
+            this.GpbInventario.Location = new System.Drawing.Point(790, 1);
             this.GpbInventario.Name = "GpbInventario";
-            this.GpbInventario.Size = new System.Drawing.Size(815, 257);
+            this.GpbInventario.Size = new System.Drawing.Size(890, 257);
             this.GpbInventario.TabIndex = 3;
             this.GpbInventario.TabStop = false;
             this.GpbInventario.Text = "Comidas";
@@ -131,7 +122,7 @@
             this.DgvInventarioComida.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvInventarioComida.RowTemplate.Height = 29;
             this.DgvInventarioComida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvInventarioComida.Size = new System.Drawing.Size(789, 217);
+            this.DgvInventarioComida.Size = new System.Drawing.Size(878, 217);
             this.DgvInventarioComida.TabIndex = 0;
             this.DgvInventarioComida.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInventarioComida_CellDoubleClick);
             // 
@@ -162,7 +153,7 @@
             this.DgvInventarioBebida.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvInventarioBebida.EnableHeadersVisualStyles = false;
             this.DgvInventarioBebida.GridColor = System.Drawing.Color.MediumSlateBlue;
-            this.DgvInventarioBebida.Location = new System.Drawing.Point(16, 24);
+            this.DgvInventarioBebida.Location = new System.Drawing.Point(6, 20);
             this.DgvInventarioBebida.Name = "DgvInventarioBebida";
             this.DgvInventarioBebida.ReadOnly = true;
             this.DgvInventarioBebida.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -183,7 +174,7 @@
             this.DgvInventarioBebida.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DgvInventarioBebida.RowTemplate.Height = 29;
             this.DgvInventarioBebida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvInventarioBebida.Size = new System.Drawing.Size(789, 214);
+            this.DgvInventarioBebida.Size = new System.Drawing.Size(878, 229);
             this.DgvInventarioBebida.TabIndex = 0;
             this.DgvInventarioBebida.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInventarioBebida_CellDoubleClick);
             // 
@@ -194,7 +185,7 @@
             this.GpbListaAlimento.ForeColor = System.Drawing.Color.MediumPurple;
             this.GpbListaAlimento.Location = new System.Drawing.Point(12, 1);
             this.GpbListaAlimento.Name = "GpbListaAlimento";
-            this.GpbListaAlimento.Size = new System.Drawing.Size(697, 257);
+            this.GpbListaAlimento.Size = new System.Drawing.Size(772, 257);
             this.GpbListaAlimento.TabIndex = 5;
             this.GpbListaAlimento.TabStop = false;
             this.GpbListaAlimento.Text = "Lista Alimentos (Cliente)";
@@ -226,7 +217,7 @@
             this.DgvListaAlimentos.DefaultCellStyle = dataGridViewCellStyle10;
             this.DgvListaAlimentos.EnableHeadersVisualStyles = false;
             this.DgvListaAlimentos.GridColor = System.Drawing.Color.MediumSlateBlue;
-            this.DgvListaAlimentos.Location = new System.Drawing.Point(12, 26);
+            this.DgvListaAlimentos.Location = new System.Drawing.Point(6, 26);
             this.DgvListaAlimentos.Name = "DgvListaAlimentos";
             this.DgvListaAlimentos.ReadOnly = true;
             this.DgvListaAlimentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -244,7 +235,7 @@
             this.DgvListaAlimentos.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DgvListaAlimentos.RowTemplate.Height = 29;
             this.DgvListaAlimentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListaAlimentos.Size = new System.Drawing.Size(679, 217);
+            this.DgvListaAlimentos.Size = new System.Drawing.Size(760, 217);
             this.DgvListaAlimentos.TabIndex = 0;
             // 
             // BtnActualizarDatos
@@ -252,9 +243,9 @@
             this.BtnActualizarDatos.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.BtnActualizarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizarDatos.ForeColor = System.Drawing.Color.Black;
-            this.BtnActualizarDatos.Location = new System.Drawing.Point(109, 140);
+            this.BtnActualizarDatos.Location = new System.Drawing.Point(276, 138);
             this.BtnActualizarDatos.Name = "BtnActualizarDatos";
-            this.BtnActualizarDatos.Size = new System.Drawing.Size(107, 29);
+            this.BtnActualizarDatos.Size = new System.Drawing.Size(167, 29);
             this.BtnActualizarDatos.TabIndex = 13;
             this.BtnActualizarDatos.Text = "Actualizar";
             this.BtnActualizarDatos.UseVisualStyleBackColor = true;
@@ -263,7 +254,7 @@
             // LblApellidoCliente
             // 
             this.LblApellidoCliente.AutoSize = true;
-            this.LblApellidoCliente.Location = new System.Drawing.Point(68, 84);
+            this.LblApellidoCliente.Location = new System.Drawing.Point(381, 68);
             this.LblApellidoCliente.Name = "LblApellidoCliente";
             this.LblApellidoCliente.Size = new System.Drawing.Size(190, 20);
             this.LblApellidoCliente.TabIndex = 12;
@@ -274,7 +265,7 @@
             this.TxtApellidoCliente.BackColor = System.Drawing.Color.SlateBlue;
             this.TxtApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtApellidoCliente.ForeColor = System.Drawing.Color.Black;
-            this.TxtApellidoCliente.Location = new System.Drawing.Point(68, 107);
+            this.TxtApellidoCliente.Location = new System.Drawing.Point(381, 91);
             this.TxtApellidoCliente.Name = "TxtApellidoCliente";
             this.TxtApellidoCliente.Size = new System.Drawing.Size(190, 27);
             this.TxtApellidoCliente.TabIndex = 11;
@@ -283,15 +274,15 @@
             // 
             this.TxtNombreCliente.BackColor = System.Drawing.Color.SlateBlue;
             this.TxtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtNombreCliente.Location = new System.Drawing.Point(68, 52);
+            this.TxtNombreCliente.Location = new System.Drawing.Point(159, 91);
             this.TxtNombreCliente.Name = "TxtNombreCliente";
-            this.TxtNombreCliente.Size = new System.Drawing.Size(190, 27);
+            this.TxtNombreCliente.Size = new System.Drawing.Size(188, 27);
             this.TxtNombreCliente.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 29);
+            this.label4.Location = new System.Drawing.Point(159, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(188, 20);
             this.label4.TabIndex = 9;
@@ -299,37 +290,41 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.groupBox2);
-            this.groupBox5.Controls.Add(this.groupBox1);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.BtnCancelar);
+            this.groupBox5.Controls.Add(this.LblPrecioApagarNumero);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.TxtApellidoCliente);
+            this.groupBox5.Controls.Add(this.TxtNombreCliente);
+            this.groupBox5.Controls.Add(this.LblApellidoCliente);
+            this.groupBox5.Controls.Add(this.BtnActualizarDatos);
+            this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.ForeColor = System.Drawing.Color.MediumPurple;
             this.groupBox5.Location = new System.Drawing.Point(12, 259);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(697, 257);
+            this.groupBox5.Size = new System.Drawing.Size(772, 257);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
-            // groupBox2
+            // button1
             // 
-            this.groupBox2.Controls.Add(this.BtnCancelar);
-            this.groupBox2.Controls.Add(this.TxtApellidoCliente);
-            this.groupBox2.Controls.Add(this.BtnActualizarDatos);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.LblApellidoCliente);
-            this.groupBox2.Controls.Add(this.TxtNombreCliente);
-            this.groupBox2.Location = new System.Drawing.Point(6, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(342, 231);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(522, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Facturar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancelar.Location = new System.Drawing.Point(169, 196);
+            this.BtnCancelar.Location = new System.Drawing.Point(191, 215);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(167, 29);
             this.BtnCancelar.TabIndex = 14;
@@ -337,12 +332,23 @@
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+            // LblPrecioApagarNumero
+            // 
+            this.LblPrecioApagarNumero.AutoSize = true;
+            this.LblPrecioApagarNumero.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.LblPrecioApagarNumero.Location = new System.Drawing.Point(581, 192);
+            this.LblPrecioApagarNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblPrecioApagarNumero.Name = "LblPrecioApagarNumero";
+            this.LblPrecioApagarNumero.Size = new System.Drawing.Size(118, 20);
+            this.LblPrecioApagarNumero.TabIndex = 15;
+            this.LblPrecioApagarNumero.Text = "Total Alimento:0";
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(6, 196);
+            this.button2.Location = new System.Drawing.Point(15, 215);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 29);
             this.button2.TabIndex = 7;
@@ -350,117 +356,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.LblPrecioAlimento);
-            this.groupBox1.Controls.Add(this.CmbMetodoPago);
-            this.groupBox1.Controls.Add(this.LblTotal);
-            this.groupBox1.Controls.Add(this.CkbEstacionamiento);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.LblPrecioApagarNumero);
-            this.groupBox1.Location = new System.Drawing.Point(354, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 231);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.SlateBlue;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(27, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Metodo de pago";
-            // 
-            // LblPrecioAlimento
-            // 
-            this.LblPrecioAlimento.AutoSize = true;
-            this.LblPrecioAlimento.BackColor = System.Drawing.Color.SlateBlue;
-            this.LblPrecioAlimento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblPrecioAlimento.ForeColor = System.Drawing.Color.Black;
-            this.LblPrecioAlimento.Location = new System.Drawing.Point(164, 38);
-            this.LblPrecioAlimento.Name = "LblPrecioAlimento";
-            this.LblPrecioAlimento.Size = new System.Drawing.Size(118, 20);
-            this.LblPrecioAlimento.TabIndex = 3;
-            this.LblPrecioAlimento.Text = "Precio Alimento:";
-            // 
-            // CmbMetodoPago
-            // 
-            this.CmbMetodoPago.BackColor = System.Drawing.Color.SlateBlue;
-            this.CmbMetodoPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbMetodoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbMetodoPago.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CmbMetodoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta"});
-            this.CmbMetodoPago.Location = new System.Drawing.Point(27, 66);
-            this.CmbMetodoPago.Name = "CmbMetodoPago";
-            this.CmbMetodoPago.Size = new System.Drawing.Size(122, 28);
-            this.CmbMetodoPago.TabIndex = 6;
-            this.CmbMetodoPago.SelectedIndexChanged += new System.EventHandler(this.CmbMetodoPago_SelectedIndexChanged);
-            // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.BackColor = System.Drawing.Color.SlateBlue;
-            this.LblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LblTotal.Location = new System.Drawing.Point(132, 165);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(70, 28);
-            this.LblTotal.TabIndex = 14;
-            this.LblTotal.Text = "Total :";
-            // 
-            // CkbEstacionamiento
-            // 
-            this.CkbEstacionamiento.AutoSize = true;
-            this.CkbEstacionamiento.BackColor = System.Drawing.Color.SlateBlue;
-            this.CkbEstacionamiento.ForeColor = System.Drawing.Color.Black;
-            this.CkbEstacionamiento.Location = new System.Drawing.Point(164, 70);
-            this.CkbEstacionamiento.Name = "CkbEstacionamiento";
-            this.CkbEstacionamiento.Size = new System.Drawing.Size(141, 24);
-            this.CkbEstacionamiento.TabIndex = 4;
-            this.CkbEstacionamiento.Text = "Estacionamiento";
-            this.CkbEstacionamiento.UseVisualStyleBackColor = false;
-            this.CkbEstacionamiento.CheckedChanged += new System.EventHandler(this.CkbEstacionamiento_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(69, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cerra cuenta";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // LblPrecioApagarNumero
-            // 
-            this.LblPrecioApagarNumero.AutoSize = true;
-            this.LblPrecioApagarNumero.BackColor = System.Drawing.Color.SlateBlue;
-            this.LblPrecioApagarNumero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblPrecioApagarNumero.ForeColor = System.Drawing.Color.Black;
-            this.LblPrecioApagarNumero.Location = new System.Drawing.Point(288, 38);
-            this.LblPrecioApagarNumero.Name = "LblPrecioApagarNumero";
-            this.LblPrecioApagarNumero.Size = new System.Drawing.Size(17, 20);
-            this.LblPrecioApagarNumero.TabIndex = 5;
-            this.LblPrecioApagarNumero.Text = "0";
-            // 
             // GpbBebidas
             // 
             this.GpbBebidas.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.GpbBebidas.Controls.Add(this.DgvInventarioBebida);
             this.GpbBebidas.ForeColor = System.Drawing.Color.MediumPurple;
-            this.GpbBebidas.Location = new System.Drawing.Point(715, 259);
+            this.GpbBebidas.Location = new System.Drawing.Point(790, 259);
             this.GpbBebidas.Name = "GpbBebidas";
-            this.GpbBebidas.Size = new System.Drawing.Size(815, 255);
+            this.GpbBebidas.Size = new System.Drawing.Size(890, 255);
             this.GpbBebidas.TabIndex = 6;
             this.GpbBebidas.TabStop = false;
             this.GpbBebidas.Text = "Bebidas";
@@ -470,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(1542, 526);
+            this.ClientSize = new System.Drawing.Size(1692, 526);
             this.Controls.Add(this.GpbBebidas);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.GpbListaAlimento);
@@ -488,10 +391,7 @@
             this.GpbListaAlimento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaAlimentos)).EndInit();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox5.PerformLayout();
             this.GpbBebidas.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -504,23 +404,16 @@
         private System.Windows.Forms.DataGridView DgvInventarioBebida;
         private System.Windows.Forms.GroupBox GpbListaAlimento;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label LblPrecioAlimento;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox CkbEstacionamiento;
-        private System.Windows.Forms.ComboBox CmbMetodoPago;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView DgvListaAlimentos;
         private System.Windows.Forms.TextBox TxtNombreCliente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnActualizarDatos;
         private System.Windows.Forms.Label LblApellidoCliente;
         private System.Windows.Forms.TextBox TxtApellidoCliente;
-        private System.Windows.Forms.Label LblPrecioApagarNumero;
         private System.Windows.Forms.GroupBox GpbBebidas;
-        private System.Windows.Forms.Label LblTotal;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Label LblPrecioApagarNumero;
     }
 }

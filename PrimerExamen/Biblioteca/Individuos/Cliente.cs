@@ -4,19 +4,20 @@ using System.Text;
 
 namespace Biblioteca
 {
-    public class Mesa : Persona
+    public class Cliente : Persona
     {
         private List<Alimento> listaAlimentos;
         private float gastoTotal;
         private string historialVenta;
+        private string historialVentaConFormato;
 
-        public Mesa() : base()
+        public Cliente() : base()
         {
             this.listaAlimentos = new List<Alimento>();
             gastoTotal = 0;
         }
 
-        public Mesa(string nombre, string apellido, List<Alimento> listaAlimento) : base(nombre, apellido)
+        public Cliente(string nombre, string apellido, List<Alimento> listaAlimento) : base(nombre, apellido)
         {
             this.listaAlimentos = listaAlimento;
             gastoTotal = 0;
@@ -27,6 +28,7 @@ namespace Biblioteca
         public float GastoTotal { get => gastoTotal; set => gastoTotal = value; }
         public List<Alimento> ListaAlimentos { get => listaAlimentos; set => listaAlimentos = value; }
         public string HistorialVenta { get => historialVenta; set => historialVenta = value; }
+        public string HistorialVentaConFormato { get => historialVentaConFormato; set => historialVentaConFormato = value; }
 
         public override string Mostrar()
         {
@@ -35,7 +37,7 @@ namespace Biblioteca
             return sb.ToString();
         }
 
-        public static bool operator +(Mesa cliente, Alimento Alimento)
+        public static bool operator +(Cliente cliente, Alimento Alimento)
         {
             if (cliente.listaAlimentos != null)
             {
@@ -46,7 +48,7 @@ namespace Biblioteca
             return false;
         }
 
-        public static bool operator -(Mesa cliente, Alimento alimento)
+        public static bool operator -(Cliente cliente, Alimento alimento)
         {
             if (cliente.listaAlimentos != null)
             {
@@ -57,7 +59,7 @@ namespace Biblioteca
             return false;
         }
 
-        public static bool operator ==(Mesa cliente, Alimento alimento)
+        public static bool operator ==(Cliente cliente, Alimento alimento)
         {
             foreach (Alimento item in cliente.listaAlimentos)
             {
@@ -69,7 +71,7 @@ namespace Biblioteca
 
             return false;
         }
-        public static bool operator !=(Mesa cliente, Alimento alimento)
+        public static bool operator !=(Cliente cliente, Alimento alimento)
         {
             foreach (Alimento item in cliente.listaAlimentos)
             {
@@ -95,7 +97,7 @@ namespace Biblioteca
             }
         }
 
-        public void limpiarMesa()
+        public void limpiarCliente()
         {
             Nombre = string.Empty;
             Apellido = string.Empty;
@@ -103,12 +105,17 @@ namespace Biblioteca
             gastoTotal = 0;
         }
 
-        public void GuardarInformacionVenta(bool estacionamiento, string MetodoDepago, string precioFinal)
+        public void GuardarInformacionVenta(string estacionamiento, string metodoDepago, string precioFinal)
+        {    
+            historialVenta = HacerTiket(estacionamiento,metodoDepago,precioFinal);
+            GuardarHistorial();
+        }
+
+        public string HacerTiket(string estacionamiento, string metodoDepago, string precioFinal)
         {
-            StringBuilder sb = new StringBuilder();
             Bebida auxBebida;
             Comida auxComida;
-           
+            StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Cliente: {Nombre} {Apellido}");
 
@@ -124,15 +131,18 @@ namespace Biblioteca
                     auxComida = (Comida)item;
                     sb.AppendLine(auxComida.Mostrar());
                 }
-
             }
-            sb.AppendLine($"*Estacionamiento {estacionamiento} *Metodo de pago: {MetodoDepago} *Precio final: {precioFinal}");
-            sb.AppendLine("----------------------------------------------------");
 
-            HistorialVenta = sb.ToString();
+            sb.AppendLine($"* Estacionamiento {estacionamiento} - Metodo de pago: {metodoDepago}");
+            sb.AppendLine($"* Precio final: { precioFinal} ");
+            return sb.ToString();
         }
 
-
-
+        public void GuardarHistorial()
+        {
+            HistorialVentaConFormato = HistorialVenta;
+            HistorialVentaConFormato += "-----------------------------------------------------------------------------------------------";
+           
+        }
     }
 }

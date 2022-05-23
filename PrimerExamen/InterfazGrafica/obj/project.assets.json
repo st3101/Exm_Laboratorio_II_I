@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\PrimerExamen\\InterfazGrafica\\InterfazGrafica.csproj",
+      "projectUniqueName": "D:\\Escritorio\\PrimerExamen\\InterfazGrafica\\InterfazGrafica.csproj",
       "projectName": "InterfazGrafica",
-      "projectPath": "F:\\PrimerExamen\\InterfazGrafica\\InterfazGrafica.csproj",
+      "projectPath": "D:\\Escritorio\\PrimerExamen\\InterfazGrafica\\InterfazGrafica.csproj",
       "packagesPath": "C:\\Users\\Santi\\.nuget\\packages\\",
-      "outputPath": "F:\\PrimerExamen\\InterfazGrafica\\obj\\",
+      "outputPath": "D:\\Escritorio\\PrimerExamen\\InterfazGrafica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "F:\\PrimerExamen\\Biblioteca\\Biblioteca.csproj": {
-              "projectPath": "F:\\PrimerExamen\\Biblioteca\\Biblioteca.csproj"
+            "D:\\Escritorio\\PrimerExamen\\Biblioteca\\Biblioteca.csproj": {
+              "projectPath": "D:\\Escritorio\\PrimerExamen\\Biblioteca\\Biblioteca.csproj"
             }
           }
         }

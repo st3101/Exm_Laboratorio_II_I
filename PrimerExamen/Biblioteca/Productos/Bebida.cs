@@ -1,9 +1,5 @@
 ﻿using Biblioteca.Productos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Biblioteca
 {
@@ -11,12 +7,11 @@ namespace Biblioteca
     {
         float litros;
 
-
-        public Bebida(string nombre, string descripcion,float precio,float litros,int cantidad) : base(nombre, descripcion, precio,cantidad)
+        public Bebida(string nombre, string descripcion, float precio, float litros, int cantidad, ETemperatura temperatura) : base(nombre, descripcion, precio, cantidad, temperatura)
         {
             this.Litros = litros;
         }
-        public Bebida(string nombre, string descripcion,float precio,float litros,int cantidad,int id) : base(nombre, descripcion, precio,cantidad,id)
+        public Bebida(string nombre, string descripcion, float precio, float litros, int cantidad, int id, ETemperatura temperatura) : base(nombre, descripcion, precio, cantidad, id, temperatura)
         {
             this.Litros = litros;
         }
@@ -26,8 +21,8 @@ namespace Biblioteca
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"{base.Mostrar()} *litros: {Litros}" );
-            return sb.ToString();  
+            sb.Append($"{base.Mostrar()} - litros: {Litros}");
+            return sb.ToString();
         }
 
     }

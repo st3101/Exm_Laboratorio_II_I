@@ -90,3 +90,4 @@ F:\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\aa-DJ\InterfazGrafica.r
 F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.csproj.CopyComplete
 F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.genruntimeconfig.cache
 F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\ref\InterfazGrafica.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.FrmFacturacion.resources

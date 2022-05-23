@@ -51,6 +51,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(639, 705);
             this.Controls.Add(this.RtbHistorial);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmHistorial";
             this.ShowIcon = false;
