@@ -56,7 +56,7 @@ virtuales
 En formulario empleados se puede buscar por nombre y sueldo a un empleado
 
 ○ Dos sonidos diferentes
-Si (en 2 casos muy espesificos el 1°Intentas loguear con datos invalidos y el 2° Cuando busca un empleado y no lo encuentra)
+Si (en 2 casos muy espesificos el 1°Intentas loguear con datos invalidos y el 2° Cuando te deslogeas sonido correcto)
 
 ○ Menu facturacion y recibo 
 -Si, en el menu facturar
