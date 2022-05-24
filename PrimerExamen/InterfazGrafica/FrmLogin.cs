@@ -23,9 +23,17 @@ namespace InterfazGrafica
         {        
             if(!Loguear())
             {
+
+                Sistema.SonarError();
                 MessageBox.Show("No se encontro al usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                Sistema.SonarCorrecto();
+            }
+
             limpiar();
+          
         }
 
         private void btnAutoLoginAdmin_Click(object sender, EventArgs e)

@@ -1,11 +1,15 @@
 ﻿using Biblioteca.Productos;
 using System.Collections.Generic;
+using System.IO;
+using System.Media;
 
 namespace Biblioteca.Sistema
 {
     public static class Sistema
     {
-        static public Cliente[] arrayMesas;
+        static private SoundPlayer sonidoCorrecto;
+        static private SoundPlayer sonidoError;
+        static private Cliente[] arrayMesas;
         static private List<Empleado> listaEmpleado;
         static private List<Comida> listaComida;
         static private List<Bebida> listaBebida;
@@ -16,6 +20,7 @@ namespace Biblioteca.Sistema
             HarcodearBebidas();
             HarcodearComida();
             InstaciarMesas();
+            InstancuiarSonidos();
         }
 
         public static List<Empleado> ListaEmpleado { get => listaEmpleado; }
@@ -467,6 +472,20 @@ namespace Biblioteca.Sistema
             }
 
             return null;
+        }
+       private static void InstancuiarSonidos()
+        {
+            //sonidoCorrecto = new SoundPlayer("D:/Escritorio/PrimerExamen/Biblioteca/Sonido/SongCorrecto.wav");
+            sonidoCorrecto = new SoundPlayer(System.AppDomain.CurrentDomain.BaseDirectory + "/SongCorrecto.wav");
+            sonidoError = new SoundPlayer(System.AppDomain.CurrentDomain.BaseDirectory + "/SongError.wav");
+        }
+        public static void SonarCorrecto()
+        {
+            sonidoCorrecto.Play();
+        }
+        public static void SonarError()
+        {
+            sonidoError.Play();
         }
     }
 }

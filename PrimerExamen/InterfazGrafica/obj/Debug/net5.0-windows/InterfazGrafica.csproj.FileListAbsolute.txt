@@ -91,3 +91,10 @@ F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.csproj.
 F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.genruntimeconfig.cache
 F:\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\ref\InterfazGrafica.dll
 D:\Escritorio\PrimerExamen\InterfazGrafica\obj\Debug\net5.0-windows\InterfazGrafica.FrmFacturacion.resources
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\System.Drawing.Common.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\System.Windows.Extensions.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Escritorio\PrimerExamen\InterfazGrafica\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll

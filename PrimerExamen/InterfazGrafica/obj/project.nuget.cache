@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2viNcZEaQI+Bl4gNXpvyZAsF0YdUMDcoiNxHD/YOEHsKCvtEXUf+DXUYmx+xgI1bMSuH163f2klIR0lOi8SHLQ==",
+  "dgSpecHash": "AnMhaLLIhWzr4UpBvTkU5AGddOBi7jxwEscQq3pOepN+thl4KQOZbXbO4NixdM8vAlhC5wviGMR0T86E8Q8KUg==",
   "success": true,
   "projectFilePath": "D:\\Escritorio\\PrimerExamen\\InterfazGrafica\\InterfazGrafica.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Santi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Santi\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Santi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
