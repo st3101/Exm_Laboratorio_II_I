@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8oJ5Q0Ta8SSpefaN43Sr/N3qdtTFABhEXvJ5j0g7w4+hKBNIR+owrntjBQvIoMcPyo0hfcMaGFXx6xsbnAEqzQ==",
+  "success": true,
+  "projectFilePath": "D:\\Escritorio\\PrimerExamen\\Biblioteca\\Biblioteca.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Santi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Santi\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Santi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
